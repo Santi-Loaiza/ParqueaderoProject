@@ -44,7 +44,3 @@ Se calcula la diferencia entre ambas horas (considerando si pasa de medianoche).
 Se obtiene el número de horas a cobrar (redondeando hacia arriba).
 
 Se multiplica por la tarifa correspondiente al tipo de vehículo.
-
-## 6. Conclusión
-
-El programa permite gestionar un parqueadero de forma básica y práctica, demostrando el uso de funciones, ciclos, condicionales y listas en Python. Sirve como base para futuras mejoras, como persistencia de datos en archivos o integración con una interfaz gráfica.
