@@ -3,6 +3,8 @@ TARIFA_POR_HORA = {'Carro': 3000, 'Moto': 1600}
 
 # Para guardar los vehículos
 vehiculos_estacionados = []
+
+#Informacion de capacidad del parqueadero
 CAPACIDAD_MOTOS = 2
 CAPACIDAD_CARROS = 3
 CAPACIDAD_TOTAL = CAPACIDAD_MOTOS + CAPACIDAD_CARROS
