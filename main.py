@@ -6,7 +6,7 @@ TARIFA_POR_HORA = {'Carro': 3000, 'Moto': 1600}
 vehiculos_estacionados = []
 
 
-# Funciones para calcular
+# Funciones pa calcular
 def convertir_minutos(hora_str):
     horas, minutos = hora_str.split(':')
     return int(horas) * 60 + int(minutos)
@@ -44,6 +44,12 @@ def registrar_ingreso():
     if tipo not in ["Carro", "Moto"]:
         print("⚠️ Tipo de vehículo inválido.".center(60, ' '))
         return
+    if tipo == "Carro" and not placa[-1].isdigit():
+        print("OJO. La placa de un carro no termina en una letra.".center(60, ' '))
+        return
+    if tipo == "Moto" and not placa[-1].isalpha():
+        print("OJO. La placa de una moto no termina en un número.".center(60, ' '))
+        return
 
     hora_entrada = input("Ingrese la hora de entrada (HH:MM): ")
 
@@ -80,11 +86,11 @@ def mostrar_vehiculos():
     if not vehiculos_estacionados:
         print("No hay vehículos estacionados.")
         return
-    print("\n--- Vehículos en el parqueadero ---")
+    print("\nVehículos en el parqueadero".center(60,"-"))
     for v in vehiculos_estacionados:
         placa, tipo = v['datos']
         print(f"Placa: {placa} | Tipo: {tipo} | Entrada: {v['hora_entrada']} | Salida: {v['hora_salida']}")
-    print("".center(50, '-'))
+    print("".center(60, '-'))
 
 
 # Menu para el parqueadero
